@@ -1,8 +1,4 @@
-/* =============================================
-   SCRIPT.JS — Escritório de Advocacia
-   ============================================= */
 
-// ── DADOS DO ORÇAMENTO ──────────────────────
 const orcamentoData = {
   trabalhista: {
     title: 'Direito trabalhista',
@@ -42,7 +38,7 @@ const orcamentoData = {
   }
 }
 
-// ── TABS DE ORÇAMENTO ───────────────────────
+
 const tabs = document.querySelectorAll('.orc-tab')
 
 tabs.forEach(tab => {
@@ -67,7 +63,7 @@ tabs.forEach(tab => {
   })
 })
 
-// ── MENU MOBILE ─────────────────────────────
+
 const burger = document.querySelector('.navbar__burger')
 const navLinks = document.querySelector('.navbar__links')
 
@@ -77,7 +73,7 @@ if (burger && navLinks) {
     burger.setAttribute('aria-expanded', isOpen)
   })
 
-  // Fecha o menu ao clicar em um link
+  
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open')
@@ -86,7 +82,7 @@ if (burger && navLinks) {
   })
 }
 
-// ── ANIMAÇÃO DE SCROLL (FADE IN) ─────────────
+
 const fadeEls = document.querySelectorAll(
   '.area-card, .depo-card, .orcamento__card, .hero__stat'
 )
@@ -97,7 +93,7 @@ const observer = new IntersectionObserver(
   entries => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        // Stagger: cada elemento aparece com um pequeno delay em sequência
+        
         setTimeout(() => {
           entry.target.classList.add('visible')
         }, i * 60)

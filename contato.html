@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descreva seu caso — Escritório de Advocacia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contato.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="navbar__logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af6a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 3L3 9v12h18V9L12 3z"/><path d="M9 21V12h6v9"/>
+      </svg>
+      <span>Escritório de Advocacia</span>
+    </a>
+    <nav class="navbar__links" aria-label="Menu principal">
+      <a href="index.html#areas">Áreas</a>
+      <a href="index.html#orcamento">Orçamento</a>
+      <a href="index.html#depoimentos">Clientes</a>
+      <a href="contato.html" aria-current="page">Contato</a>
+    </nav>
+    <a href="https://wa.me/5535984128081?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta." class="navbar__cta" target="_blank" rel="noopener">Falar com advogado</a>
+    <button class="navbar__burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <section class="contato-hero">
+    <div class="container contato-hero__inner">
+
+      <div class="contato-hero__text">
+        <span class="section-tag">fale conosco</span>
+        <h1 class="contato-hero__title">Descreva seu caso<br>ou situação</h1>
+        <p class="contato-hero__sub">Preencha o formulário. O advogado responsável pela sua área retorna em até <strong>24 horas</strong>.</p>
+        <ul class="contato-hero__list" aria-label="Como funciona">
+          <li>
+            <span class="contato-hero__step" aria-hidden="true">1</span>
+            <span>Você descreve seu caso e escolhe a área</span>
+          </li>
+          <li>
+            <span class="contato-hero__step" aria-hidden="true">2</span>
+            <span>O sistema encaminha ao advogado responsável</span>
+          </li>
+          <li>
+            <span class="contato-hero__step" aria-hidden="true">3</span>
+            <span>Você recebe a confirmação pelo canal que preferir</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contato-form-wrap">
+        <form class="contato-form" id="contato-form" novalidate aria-label="Formulário de contato">
+
+          <fieldset class="form-step" id="step-1" aria-labelledby="step1-legend">
+            <div class="form-step__header">
+              <span class="form-step__num" aria-hidden="true">1</span>
+              <legend class="form-step__legend" id="step1-legend">Seus dados</legend>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="nome">Nome completo <span class="required" aria-label="obrigatório">*</span></label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name" required />
+                <span class="field-error" id="nome-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row form-row--2">
+              <div class="form-field">
+                <label for="cpf">CPF <span class="required" aria-label="obrigatório">*</span></label>
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" inputmode="numeric" required />
+                <span class="field-error" id="cpf-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-field">
+                <label for="telefone">WhatsApp / Telefone <span class="required" aria-label="obrigatório">*</span></label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(35) 99999-9999" maxlength="15" inputmode="numeric" autocomplete="tel" required />
+                <span class="field-error" id="telefone-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="email">E-mail <span class="field-optional">(opcional)</span></label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" />
+                <span class="field-hint">Necessário se quiser confirmação por e-mail</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="numero-processo">Número do processo <span class="field-optional">(se houver)</span></label>
+                <input type="text" id="numero-processo" name="numeroProcesso" placeholder="0000000-00.0000.0.00.0000" />
+                <span class="field-hint">Deixe em branco se não houver processo aberto</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step" id="step-2" aria-labelledby="step2-legend">
+            <div class="form-step__header">
+              <span class="form-step__num" aria-hidden="true">2</span>
+              <legend class="form-step__legend" id="step2-legend">Seu caso</legend>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="area">Área de atuação <span class="required" aria-label="obrigatório">*</span></label>
+                <select id="area" name="area" required>
+                  <option value="">Selecione a área do seu caso</option>
+                  <option value="trabalhista">Direito trabalhista</option>
+                  <option value="civel">Direito cível</option>
+                  <option value="familia">Direito de família</option>
+                  <option value="empresarial">Direito empresarial</option>
+                  <option value="criminal">Direito criminal</option>
+                  <option value="previdenciario">Direito previdenciário</option>
+                </select>
+                <span class="field-hint">Não tem certeza? Escolha a mais próxima — o advogado orienta.</span>
+                <span class="field-error" id="area-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="advogado-card" id="advogado-card" hidden aria-live="polite">
+              <div class="advogado-card__avatar" id="adv-avatar" aria-hidden="true">DR</div>
+              <div class="advogado-card__info">
+                <span class="advogado-card__label">Advogado responsável</span>
+                <strong class="advogado-card__nome" id="adv-nome">Dr. Rafael Souza</strong>
+                <span class="advogado-card__area" id="adv-area">Direito trabalhista</span>
+              </div>
+              <span class="advogado-card__badge" id="adv-badge">Trabalhista</span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="descricao">Descrição do caso <span class="required" aria-label="obrigatório">*</span></label>
+                <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva brevemente sua situação. Quanto mais detalhes, mais preciso será o primeiro atendimento." required maxlength="1000"></textarea>
+                <div class="textarea-footer">
+                  <span class="field-error" id="descricao-error" role="alert" aria-live="polite"></span>
+                  <span class="char-count" id="char-count" aria-live="polite">0 / 1000</span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step" id="step-3" aria-labelledby="step3-legend">
+            <div class="form-step__header">
+              <span class="form-step__num" aria-hidden="true">3</span>
+              <legend class="form-step__legend" id="step3-legend">Como deseja receber sua confirmação?</legend>
+            </div>
+
+            <div class="canal-grid" role="radiogroup" aria-labelledby="step3-legend">
+              <label class="canal-card" for="canal-whatsapp">
+                <input type="radio" id="canal-whatsapp" name="canal" value="whatsapp" checked />
+                <div class="canal-card__inner">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.12 1.523 5.851L.057 23.535a.75.75 0 00.916.913l5.762-1.511A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.695 9.695 0 01-4.934-1.349l-.353-.21-3.658.96.976-3.565-.229-.368A9.697 9.697 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+                  <span class="canal-card__label">WhatsApp</span>
+                  <span class="canal-card__desc">Mensagem no número informado</span>
+                </div>
+              </label>
+
+              <label class="canal-card" for="canal-email">
+                <input type="radio" id="canal-email" name="canal" value="email" />
+                <div class="canal-card__inner">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <span class="canal-card__label">E-mail</span>
+                  <span class="canal-card__desc">Confirmação no seu e-mail</span>
+                </div>
+              </label>
+
+              <label class="canal-card" for="canal-ligacao">
+                <input type="radio" id="canal-ligacao" name="canal" value="ligacao" />
+                <div class="canal-card__inner">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                  <span class="canal-card__label">Ligação</span>
+                  <span class="canal-card__desc">Retorno por telefone</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="canal-aviso" id="canal-aviso-email" hidden role="alert">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Para confirmação por e-mail, preencha o campo de e-mail acima.
+            </div>
+          </fieldset>
+
+          <div class="form-lgpd">
+            <label class="lgpd-check" for="lgpd">
+              <input type="checkbox" id="lgpd" name="lgpd" required />
+              <span>Concordo com o tratamento dos meus dados conforme a <a href="#" class="lgpd-link">Política de Privacidade</a> e a LGPD. Os dados serão usados exclusivamente para contato jurídico.</span>
+            </label>
+            <span class="field-error" id="lgpd-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="form-submit" id="form-submit">
+            <span id="submit-text">Enviar solicitação</span>
+            <svg id="submit-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <svg id="submit-spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"/><path d="M12 2a10 10 0 0110 10" stroke-linecap="round"/></svg>
+          </button>
+          <p class="form-submit__hint">Seus dados são protegidos e usados apenas para atendimento jurídico.</p>
+
+        </form>
+
+        <div class="form-sucesso" id="form-sucesso" hidden aria-live="polite" role="status">
+          <div class="sucesso-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h2 class="sucesso-title">Solicitação enviada!</h2>
+          <p class="sucesso-texto" id="sucesso-texto">Seu caso foi encaminhado ao advogado responsável.</p>
+          <div class="sucesso-advogado" id="sucesso-advogado">
+            <div class="sucesso-advogado__avatar" id="sucesso-avatar" aria-hidden="true">DR</div>
+            <div>
+              <strong id="sucesso-adv-nome">Dr. Rafael Souza</strong>
+              <span id="sucesso-adv-area">Direito trabalhista</span>
+            </div>
+          </div>
+          <p class="sucesso-prazo">Retorno em até <strong>24 horas</strong> pelo canal escolhido.</p>
+          <a href="index.html" class="btn btn--gold sucesso-btn">Voltar ao início</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">© 2025 Escritório de Advocacia · OAB/MG · Todos os direitos reservados</span>
+      <nav class="footer__links" aria-label="Links do rodapé">
+        <a href="#">Política de privacidade</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="contato.js"></script>
+</body>
+</html>
