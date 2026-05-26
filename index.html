@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escritório de Advocacia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar">
+    <div class="navbar__logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af6a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 3L3 9v12h18V9L12 3z"/><path d="M9 21V12h6v9"/>
+      </svg>
+      <span>Escritório de Advocacia</span>
+    </div>
+    <nav class="navbar__links" aria-label="Menu principal">
+      <a href="#areas">Áreas</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#depoimentos">Clientes</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="https://wa.me/5535984128081?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta." class="navbar__cta" target="_blank" rel="noopener">Falar com advogado</a>
+    <button class="navbar__burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <img
+        src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1400&auto=format&fit=crop&q=80"
+        alt=""
+        class="hero__img"
+        loading="eager"
+      />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content container">
+      <p class="hero__eyebrow">Advocacia especializada</p>
+      <h1 class="hero__title">Defendemos seus direitos<br>com experiência e dedicação</h1>
+      <p class="hero__sub">Atendimento humanizado nas principais áreas do direito.<br>Consulta inicial <strong>gratuita</strong> — fale com um advogado agora.</p>
+      <div class="hero__actions">
+        <a href="https://wa.me/5535984128081?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20inicial%20gratuita." class="btn btn--gold" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.12 1.523 5.851L.057 23.535a.75.75 0 00.916.913l5.762-1.511A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.695 9.695 0 01-4.934-1.349l-.353-.21-3.658.96.976-3.565-.229-.368A9.697 9.697 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          Consulta gratuita
+        </a>
+        <a href="#areas" class="btn btn--outline">Conhecer as áreas</a>
+      </div>
+      <div class="hero__stats" aria-label="Números do escritório">
+        <div class="hero__stat"><span class="hero__stat-num">+500</span><span class="hero__stat-label">casos atendidos</span></div>
+        <div class="hero__stat"><span class="hero__stat-num">12 anos</span><span class="hero__stat-label">de experiência</span></div>
+        <div class="hero__stat"><span class="hero__stat-num">6 áreas</span><span class="hero__stat-label">de atuação</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ÁREAS DE ATUAÇÃO ========== -->
+  <section class="areas section" id="areas">
+    <div class="container">
+      <span class="section-tag">o que fazemos</span>
+      <h2 class="section-title">Áreas de atuação</h2>
+      <p class="section-sub">Especialistas em cada área — com curiosidades que mostram por que você pode precisar de nós.</p>
+
+      <div class="areas__grid">
+
+        <!-- TRABALHISTA -->
+        <div class="area-card">
+          <div class="area-card__header">
+            <div class="area-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+            </div>
+            <h3 class="area-card__name">Direito trabalhista</h3>
+          </div>
+          <p class="area-card__desc">Rescisão, horas extras, assédio moral, FGTS e demandas CLT.</p>
+          <div class="area-card__curiosidade">
+            <span class="curiosidade__label">Você sabia?</span>
+            <p class="curiosidade__text">Desde a Reforma Trabalhista de 2017 (art. 484-A da CLT), empregado e empregador podem encerrar o contrato por acordo mútuo — neste caso o trabalhador recebe metade do aviso prévio e 20% do FGTS, mas <em>não tem direito ao seguro-desemprego</em>.</p>
+          </div>
+          <a href="https://wa.me/5535984128081?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20sobre%20Direito%20Trabalhista." class="area-card__wpp" target="_blank" rel="noopener" aria-label="Falar sobre Direito Trabalhista no WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.12 1.523 5.851L.057 23.535a.75.75 0 00.916.913l5.762-1.511A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.695 9.695 0 01-4.934-1.349l-.353-.21-3.658.96.976-3.565-.229-.368A9.697 9.697 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+            Falar sobre este caso
+          </a>
+        </div>
+
+        <!-- CÍVEL -->
+        <div class="area-card">
+          <div class="area-card__header">
+            <div class="area-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="area-card__name">Direito cível</h3>
+          </div>
+          <p class="area-card__desc">Contratos, indenizações, cobranças e relações de consumo.</p>
+          <div class="area-card__curiosidade">
+            <span class="curiosidade__label">Você sabia?</span>
+            <p class="curiosidade__text">O Código Civil prevê que dívidas de natureza civil prescrevem em <em>3 anos</em> (art. 206, §3º). Isso significa que, após esse prazo, o credor perde o direito de cobrar judicialmente — mesmo que a dívida exista e não tenha sido paga.</p>
+          </div>
+          <a href="https://wa.me/5535984128081?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20sobre%20Direito%20Cível." class="area-card__wpp" target="_blank" rel="noopener" aria-label="Falar sobre Direito Cível no WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.12 1.523 5.851L.057 23.535a.75.75 0 00.916.913l5.762-1.511A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.695 9.695 0 01-4.934-1.349l-.353-.21-3.658.96.976-3.565-.229-.368A9.697 9.697 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+            Falar sobre este caso
+          </a>
+        </div>
+
+        <!-- FAMÍLIA -->
+        <div class="area-card">
+          <div class="area-card__header">
+            <div class="area-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3 class="area-card__name">Direito de família</h3>
+          </div>
+          <p class="area-card__desc">Divórcio, guarda, inventário e pensão alimentícia.</p>
+          <div class="area-card__curiosidade">
+            <span class="curiosidade__label">Você sabia?</span>
+            <p class="curiosidade__text">O divórcio consensual pode ser feito em <em>cartório</em>, sem processo judicial, em questão de dias — desde que não haja filhos menores ou incapazes e que as partes estejam de acordo (Lei 11.441/2007). Sem audiência, sem espera.</p>
+          </div>
+          <a href="https://wa.me/5535984128081?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20sobre%20Direito%20de%20Família." class="area-card__wpp" target="_blank" rel="noopener" aria-label="Falar sobre Direito de Família no WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.12 1.523 5.851L.057 23.535a.75.75 0 00.916.913l5.762-1.511A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.695 9.695 0 01-4.934-1.349l-.353-.21-3.658.96.976-3.565-.229-.368A9.697 9.697 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+            Falar sobre este caso
+          </a>
+        </div>
+
+        <!-- EMPRESARIAL -->
+        <div class="area-card">
+          <div class="area-card__header">
+            <div class="area-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            </div>
+            <h3 class="area-card__name">Direito empresarial</h3>
+          </div>
+          <p class="area-card__desc">Contratos, sociedades, recuperação judicial e compliance.</p>
+          <div class="area-card__curiosidade">
+            <span class="curiosidade__label">Você sabia?</span>
+            <p class="curiosidade__text">Um sócio pode ser excluído extrajudicialmente da sociedade limitada sem ir ao tribunal — basta que os demais representem <em>mais de 50% do capital social</em> e o ato seja registrado em alteração contratual (art. 1.085, Código Civil).</p>
+          </div>
+          <a href="https://wa.me/5535984128081?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20sobre%20Direito%20Empresarial." class="area-card__wpp" target="_blank" rel="noopener" aria-label="Falar sobre Direito Empresarial no WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.12 1.523 5.851L.057 23.535a.75.75 0 00.916.913l5.762-1.511A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.695 9.695 0 01-4.934-1.349l-.353-.21-3.658.96.976-3.565-.229-.368A9.697 9.697 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+            Falar sobre este caso
+          </a>
+        </div>
+
+        <!-- CRIMINAL -->
+        <div class="area-card">
+          <div class="area-card__header">
+            <div class="area-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="area-card__name">Direito criminal</h3>
+          </div>
+          <p class="area-card__desc">Defesa criminal, habeas corpus e inquéritos policiais.</p>
+          <div class="area-card__curiosidade">
+            <span class="curiosidade__label">Você sabia?</span>
+            <p class="curiosidade__text">Você tem o direito de <em>permanecer em silêncio</em> durante interrogatório policial sem que isso seja interpretado como culpa — garantia prevista no art. 5º, LXIII, da Constituição Federal. Tudo que disser pode ser usado contra você no processo.</p>
+          </div>
+          <a href="https://wa.me/5535984128081?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20sobre%20Direito%20Criminal." class="area-card__wpp" target="_blank" rel="noopener" aria-label="Falar sobre Direito Criminal no WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.12 1.523 5.851L.057 23.535a.75.75 0 00.916.913l5.762-1.511A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.695 9.695 0 01-4.934-1.349l-.353-.21-3.658.96.976-3.565-.229-.368A9.697 9.697 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+            Falar sobre este caso
+          </a>
+        </div>
+
+        <!-- PREVIDENCIÁRIO -->
+        <div class="area-card">
+          <div class="area-card__header">
+            <div class="area-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="area-card__name">Direito previdenciário</h3>
+          </div>
+          <p class="area-card__desc">Aposentadoria, BPC, auxílio-doença e revisões de benefício.</p>
+          <div class="area-card__curiosidade">
+            <span class="curiosidade__label">Você sabia?</span>
+            <p class="curiosidade__text">O INSS pode negar benefícios por erros cadastrais ou falta de documentação — mas você tem direito à <em>revisão administrativa gratuita</em>. Em 2025, o prazo para contestar uma negativa passou a ser de até 30 dias após a ciência da decisão.</p>
+          </div>
+          <a href="https://wa.me/5535984128081?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20sobre%20Direito%20Previdenciário." class="area-card__wpp" target="_blank" rel="noopener" aria-label="Falar sobre Direito Previdenciário no WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.12 1.523 5.851L.057 23.535a.75.75 0 00.916.913l5.762-1.511A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.695 9.695 0 01-4.934-1.349l-.353-.21-3.658.96.976-3.565-.229-.368A9.697 9.697 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+            Falar sobre este caso
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DEPOIMENTOS ========== -->
+  <section class="depoimentos section section--alt" id="depoimentos">
+    <div class="container">
+      <span class="section-tag">clientes</span>
+      <h2 class="section-title">O que dizem sobre nós</h2>
+      <p class="section-sub">Depoimentos reais de clientes atendidos nas nossas áreas de atuação.</p>
+      <div class="depoimentos__grid">
+
+        <article class="depo-card">
+          <div class="depo-card__stars" aria-label="5 estrelas">★★★★★</div>
+          <blockquote class="depo-card__text">"Ganhei minha causa trabalhista em menos tempo do que esperava. Atendimento muito transparente do início ao fim."</blockquote>
+          <footer class="depo-card__author">
+            <div class="depo-card__avatar" aria-hidden="true">MC</div>
+            <div><strong>Maria Costa</strong><span>Direito trabalhista</span></div>
+          </footer>
+        </article>
+
+        <article class="depo-card">
+          <div class="depo-card__stars" aria-label="5 estrelas">★★★★★</div>
+          <blockquote class="depo-card__text">"Me ajudaram com o divórcio de forma rápida e sem estresse. Resolveram tudo em cartório em poucos dias."</blockquote>
+          <footer class="depo-card__author">
+            <div class="depo-card__avatar" aria-hidden="true">JP</div>
+            <div><strong>João Pereira</strong><span>Direito de família</span></div>
+          </footer>
+        </article>
+
+        <article class="depo-card">
+          <div class="depo-card__stars" aria-label="5 estrelas">★★★★★</div>
+          <blockquote class="depo-card__text">"Meu INSS havia sido negado duas vezes. Com a ajuda deles, consegui meu auxílio-doença e recebi os atrasados."</blockquote>
+          <footer class="depo-card__author">
+            <div class="depo-card__avatar" aria-hidden="true">LS</div>
+            <div><strong>Luísa Santos</strong><span>Direito previdenciário</span></div>
+          </footer>
+        </article>
+
+        <article class="depo-card">
+          <div class="depo-card__stars" aria-label="5 estrelas">★★★★★</div>
+          <blockquote class="depo-card__text">"A assessoria jurídica evitou um processo milionário. Eles revisaram nossos contratos antes de assinar — salvou a empresa."</blockquote>
+          <footer class="depo-card__author">
+            <div class="depo-card__avatar" aria-hidden="true">RF</div>
+            <div><strong>Roberto Faria</strong><span>Direito empresarial</span></div>
+          </footer>
+        </article>
+
+        <article class="depo-card">
+          <div class="depo-card__stars" aria-label="5 estrelas">★★★★★</div>
+          <blockquote class="depo-card__text">"Estava em pânico depois de ser indiciado. Eles garantiram meu habeas corpus e o caso foi arquivado. Profissionalismo total."</blockquote>
+          <footer class="depo-card__author">
+            <div class="depo-card__avatar" aria-hidden="true">PA</div>
+            <div><strong>Paulo Alves</strong><span>Direito criminal</span></div>
+          </footer>
+        </article>
+
+        <article class="depo-card">
+          <div class="depo-card__stars" aria-label="5 estrelas">★★★★★</div>
+          <blockquote class="depo-card__text">"Fui orientada sobre meus direitos antes de qualquer decisão. Resolvi a dívida do condomínio sem precisar ir a julgamento."</blockquote>
+          <footer class="depo-card__author">
+            <div class="depo-card__avatar" aria-hidden="true">CM</div>
+            <div><strong>Carla Moura</strong><span>Direito cível</span></div>
+          </footer>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ORÇAMENTO ========== -->
+  <section class="orcamento section" id="orcamento">
+    <div class="container">
+      <span class="section-tag">valores</span>
+      <h2 class="section-title">Prévia de orçamento</h2>
+      <p class="section-sub">Valores estimados com base na Tabela de Honorários da OAB. Selecione uma área para ver os valores de referência.</p>
+
+      <div class="orcamento__tabs" role="tablist" aria-label="Áreas de atuação">
+        <button class="orc-tab active" data-area="trabalhista" role="tab" aria-selected="true">Trabalhista</button>
+        <button class="orc-tab" data-area="civel" role="tab" aria-selected="false">Cível</button>
+        <button class="orc-tab" data-area="familia" role="tab" aria-selected="false">Família</button>
+        <button class="orc-tab" data-area="empresarial" role="tab" aria-selected="false">Empresarial</button>
+        <button class="orc-tab" data-area="criminal" role="tab" aria-selected="false">Criminal</button>
+        <button class="orc-tab" data-area="previdenciario" role="tab" aria-selected="false">Previdenciário</button>
+      </div>
+
+      <div class="orcamento__card" id="orc-card" role="tabpanel">
+        <h3 class="orc-card__title" id="orc-title">Direito trabalhista</h3>
+        <div class="orc-card__grid">
+          <div class="orc-item"><span class="orc-item__label">Consulta inicial</span><strong class="orc-item__value" id="orc-v1">Gratuita</strong></div>
+          <div class="orc-item"><span class="orc-item__label" id="orc-l2">Honorários (êxito)</span><strong class="orc-item__value" id="orc-v2">20% a 30%</strong></div>
+          <div class="orc-item"><span class="orc-item__label" id="orc-l3">Honorários fixos</span><strong class="orc-item__value" id="orc-v3">A partir de R$ 800</strong></div>
+        </div>
+        <p class="orc-card__note" id="orc-note">Baseado na Tabela OAB/MG. O valor final depende da complexidade, prazo e instância do caso. Agende uma consulta para orçamento personalizado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA CONTATO ========== -->
+  <section class="cta section" id="contato">
+    <div class="container cta__inner">
+      <div class="cta__text">
+        <h2 class="cta__title">Fale com um advogado agora</h2>
+        <p class="cta__sub">Consulta inicial gratuita. Escolha sua área de interesse e inicie o atendimento pelo WhatsApp — sem compromisso.</p>
+      </div>
+      <div class="cta__actions">
+        <a href="https://wa.me/5535984128081?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20inicial%20gratuita." class="btn btn--green" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.12 1.523 5.851L.057 23.535a.75.75 0 00.916.913l5.762-1.511A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.695 9.695 0 01-4.934-1.349l-.353-.21-3.658.96.976-3.565-.229-.368A9.697 9.697 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          Falar pelo WhatsApp
+        </a>
+        <a href="mailto:contato@escritorio.com.br" class="btn btn--outline-light">Enviar e-mail</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">© 2025 Escritório de Advocacia · OAB/MG · Todos os direitos reservados</span>
+      <nav class="footer__links" aria-label="Links do rodapé">
+        <a href="#">Política de privacidade</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
