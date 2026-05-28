@@ -209,9 +209,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const canal    = document.querySelector('input[name="canal"]:checked')?.value
     const nome     = document.getElementById('nome').value.trim()
 
-    await new Promise(resolve => setTimeout(resolve, 1800))
+    try {
+      const res = await fetch('https://ina0bh1g0g.execute-api.us-east-1.amazonaws.com/Prod/contato', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome,
+          cpf: document.getElementById('cpf').value,
+          telefone: document.getElementById('telefone').value,
+          email: document.getElementById('email').value,
+          numeroProcesso: document.getElementById('numero-processo').value,
+          area,
+          descricao: descricao.value,
+          canal
+        })
+      })
 
-    
+      const resultado = await res.json()
+
+      if (!res.ok) {
+        submitBtn.disabled = false
+        submitText.textContent = 'Enviar solicitação'
+        submitIcon.style.display = 'block'
+        submitSpinner.style.display = 'none'
+        alert(resultado.message || 'Erro ao enviar. Tente novamente.')
+        return
+      }
+
+    } catch (err) {
+      submitBtn.disabled = false
+      submitText.textContent = 'Enviar solicitação'
+      submitIcon.style.display = 'block'
+      submitSpinner.style.display = 'none'
+      alert('Erro de conexão. Verifique sua internet e tente novamente.')
+      return
+    }
+
     form.hidden = true
     formSucesso.hidden = false
 

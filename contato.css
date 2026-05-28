@@ -191,6 +191,7 @@
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(212,175,106,0.15);
   background: #fff;
+  
 }
 
 .form-field input.error,

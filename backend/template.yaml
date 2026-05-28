@@ -1,0 +1,71 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Backend do formulário de contato — Escritório de Advocacia
+
+Globals:
+  Function:
+    Timeout: 10
+    Runtime: nodejs20.x
+    Environment:
+      Variables:
+        AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+        SES_FROM_EMAIL: !Ref SesFromEmail
+        EMAIL_TRABALHISTA: !Ref EmailTrabalhista
+        EMAIL_CIVEL: !Ref EmailCivel
+        EMAIL_FAMILIA: !Ref EmailFamilia
+        EMAIL_EMPRESARIAL: !Ref EmailEmpresarial
+        EMAIL_CRIMINAL: !Ref EmailCriminal
+        EMAIL_PREVIDENCIARIO: !Ref EmailPrevidenciario
+
+Parameters:
+  SesFromEmail:
+    Type: String
+    Description: E-mail verificado no SES (remetente)
+  EmailTrabalhista:
+    Type: String
+    Description: E-mail do advogado trabalhista
+  EmailCivel:
+    Type: String
+    Description: E-mail do advogado civel
+  EmailFamilia:
+    Type: String
+    Description: E-mail do advogado familia
+  EmailEmpresarial:
+    Type: String
+    Description: E-mail do advogado empresarial
+  EmailCriminal:
+    Type: String
+    Description: E-mail do advogado criminal
+  EmailPrevidenciario:
+    Type: String
+    Description: E-mail do advogado previdenciario
+
+Resources:
+  ContatoFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: dist/
+      Handler: handler.handler
+      Description: Processa formulario de contato e roteia para advogado via SES
+      Policies:
+        - SESCrudPolicy:
+            IdentityName: !Ref SesFromEmail
+      Events:
+        ContatoPost:
+          Type: Api
+          Properties:
+            Path: /contato
+            Method: post
+        ContatoOptions:
+          Type: Api
+          Properties:
+            Path: /contato
+            Method: options
+
+Outputs:
+  ApiUrl:
+    Description: URL da API Gateway
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/contato"
+  ContatoFunctionArn:
+    Description: ARN da funcao Lambda
+    Value: !GetAtt ContatoFunction.Arn
