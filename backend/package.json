@@ -1,0 +1,28 @@
+{
+  "name": "advocacia-backend",
+  "version": "1.0.0",
+  "description": "Lambda backend do formulário de contato — Escritório de Advocacia",
+  "main": "dist/handler.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "dev": "sam local start-api --env-vars env.json",
+    "deploy": "sam build && sam deploy --guided"
+  },
+  "keywords": [],
+  "author": "Lucas Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.1055.0"
+  }
+}
